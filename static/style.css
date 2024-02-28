@@ -1,0 +1,31 @@
+#bck{
+    background:linear-gradient(rgba(221, 222, 212, 0.452),rgb(83, 132, 162));
+}
+#background{
+    height:60vh;
+    background:url('/static/images/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1vh;
+}
+#search{
+    height:8vh;
+    border-top-left-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+}
+#search-btn{
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+}
+#ind_card{
+    background:linear-gradient(rgb(83, 132, 162),rgba(15, 188, 52, 0.452));
+}
+.ind_bt{
+    background:linear-gradient(rgba(15, 188, 52, 0.452),rgb(116, 129, 138));
+}
+.card_in_1,.card_in_2{
+    border-radius: 5vh 5vh 5vh 5vh;
+    padding: 3rem 3rem;
+}
+
+

@@ -1,0 +1,85 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block main%}
+
+<div class="conatiner-fluid  bg-light   d-flex justify-content-center " id="bck" >
+<div class="container rounded d-flex justify-content-center bg-light p-3  my-5" id="background">
+    <form action="" method="post">
+        {%csrf_token%}
+    <div class="d-flex flex-row  col-12 m-5">
+        <input id="search" name="search" type="text" class="col-10 " placeholder="Search your area">
+        <button id="search-btn" class=" col-2 btn btn-primary ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+        </button>
+    </div>
+    </form>
+</div>
+</div>
+
+<!-- cards -->
+<div class=" container-fluid   p-3" id="ind_card">
+    <div class="title h2 text-white mx-4">
+        Famous places:
+    </div>
+{%for response in responses %}
+<div class="d-flex flex-column mb-3 col-8 m-auto py-3">
+    <div class="card rounded-5 p-3" >
+        <div class="card-body">
+          <h5 class="card-title">{{response.dam_name}}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{response.date}}</h6>
+        </div>
+      </div>
+</div>
+{%endfor%}
+</div>
+<!-- cards end -->
+
+<div class="container-fluid p-3 border-0 ind_bt" id="">
+    <div class="title h2 text-white text-center" >
+        Flood Alert System: How it Works
+    </div>
+    <div class="row">
+    <div class="col-8  text-center">
+        <div class="card  card_in_1  my-5" >
+              <h5 class="card-title">What It Is?</h5>
+              <p class="card-text">
+                A flood alert system utilizes monitoring, communication, and education to provide timely warnings, aiding communities in preparing for and responding to potential flooding, minimizing risks and damages.
+              </p>
+          </div>
+    </div>
+    <div class="col-4 col-xs">
+        <img src="static/images/what_it_is.gif" class="img-thumbnail rounded-circle mx-5" style="height:40vh;">
+    </div>
+</div>
+    <div class="d-flex justify-content-end row">
+        <div class="col-4">
+            <img src="static/images/how_it_works.gif" class="img-thumbnail rounded-circle mx-5" style="height:40vh;">
+        </div>
+    <div class="col-8  text-center">
+        <div class="card  my-3 card_in_2 my-5" >
+              <h5 class="card-title">How it works</h5>
+              <p class="card-text">
+                A flood alert system utilizes monitoring, communication, and education to provide timely warnings, aiding communities in preparing for and responding to potential flooding, minimizing risks and damages.
+              </p>
+          </div>
+    </div>
+    
+</div>
+<div class="row">
+<div class="col-8  text-center">
+    <div class="card my-3 card_in_1  my-5" >
+          <h5 class="card-title">What Is to be done?</h5>
+          <p class="card-text">
+            A flood alert system utilizes monitoring, communication, and education to provide timely warnings, aiding communities in preparing for and responding to potential flooding, minimizing risks and damages.
+          </p>
+      </div>
+</div>
+<div class="col-4">
+    <img src="static/images/to_be_done.gif" class="img-thumbnail rounded-circle mx-5" style="height:40vh;">
+</div>
+</div>
+</div>
+
+{%endblock main%}

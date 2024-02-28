@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {%load static%}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flood Alert System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Nova+Square&family=Rubik+Broken+Fax&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static './style.css'%}">
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="navbar justify-content-end navbar-expand-lg bg-primary shadow justify-content-center"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="/"> Flood Alert System </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="d-flex p-3 justify-content-between" role="search">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content- me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="/"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/code_compiler/">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/code_compiler/"
+                  >Explore</a
+                >
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <!-- navbar ends -->
+
+    {%block main%}{%endblock main%}
+
+    <!-- footer  -->
+    <footer class="container-fluid h-100 bg-secondary text-center p-5">
+      <div class="d-flex flex-row justify-content-center">
+        <div class="card col-3 mx-5 bg-secondary border-0">
+          <ul class="list-group">
+            <li class="list-group-item bg-secondary border-0">
+              <a
+                href="https://www.nctsn.org/what-is-child-trauma/trauma-types/disasters/flood-resources"
+                class="text-black nav-link"
+                >Know more About Floods</a
+              >
+            </li>
+            <li class="list-group-item bg-secondary border-0">
+              <a
+                href="https://www.knowyourriver.com/"
+                class="text-black nav-link"
+                >Know your river</a
+              >
+            </li>
+            <li class="list-group-item bg-secondary border-0">
+              <a
+                href="https://www.knowyourriver.com/"
+                class="text-black nav-link"
+                >Explore all</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="card col-3 mx-5 bg-secondary border-0">
+          <ul class="list-group">
+            <li class="list-group-item bg-secondary border-0">
+              <a href="/" class="text-black nav-link">Home</a>
+            </li>
+            <li class="list-group-item bg-secondary border-0">
+              <a href="/about/" class="text-black nav-link">About</a>
+            </li>
+            <li class="list-group-item bg-secondary border-0">
+              <a href="/about/" class="text-black nav-link">Explore</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="text-white" />
+      Copyright @ Flood Alert System
+    </footer>
+    <!-- footer ends -->
+
+
+  </body>
+</html>
